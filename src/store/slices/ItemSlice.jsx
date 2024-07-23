@@ -10,3 +10,5 @@ const itemSlice = createSlice({
 });
 
 export default itemSlice.reducer;
+
+export const { addItem } = itemSlice.actions;
