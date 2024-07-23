@@ -7,10 +7,12 @@ const itemSlice = createSlice({
     addItem(state, action) {
       state.push(action.payload);
     },
-    deleteItem(state, action) {},
+    deleteItem(state, action) {
+      return state.filter((_, index) => index !== action.payload);
+    },
   },
 });
 
 export default itemSlice.reducer;
 
-export const { addItem } = itemSlice.actions;
+export const { addItem, deleteItem } = itemSlice.actions;
